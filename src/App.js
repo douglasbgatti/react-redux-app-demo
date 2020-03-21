@@ -1,5 +1,6 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import CakeContainer from "./components/CakeContainer";
 
 const App = () => {
   let title = "React Redux App demo";
@@ -7,8 +8,10 @@ const App = () => {
   return (
     <div className="App">
       <h1>{title}</h1>
+
+      <CakeContainer />
     </div>
   );
-}
+};
 
 export default App;
