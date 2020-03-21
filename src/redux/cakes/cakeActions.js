@@ -3,7 +3,8 @@ export const constants = {
 };
 
 export const actions = {
-  buyCake: () => ({
-    type: constants.BUY_CAKE
+  buyCake: (number = 1) => ({
+    type: constants.BUY_CAKE,
+    payload: number
   })
 };
