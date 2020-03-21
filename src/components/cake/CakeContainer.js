@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 import { Button, Row } from "antd";
 
-import actions from "../redux/index";
+import actions from "../../redux/index";
 
 const CakeContainer = props => {
   return (
@@ -23,7 +23,7 @@ const CakeContainer = props => {
 
 const mapStateToProps = state => {
   return {
-    numOfCakes: state.numOfCakes
+    numOfCakes: state.cake.numOfCakes
   };
 };
 

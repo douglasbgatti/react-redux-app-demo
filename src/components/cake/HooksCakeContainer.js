@@ -4,10 +4,10 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { Button, Row } from "antd";
 
-import actions from "../redux/index";
+import actions from "../../redux/index";
 
 const HooksCakeContainer = props => {
-  const numOfCakes = useSelector(state => state.numOfCakes);
+  const numOfCakes = useSelector(state => state.cake.numOfCakes);
 
   const dispatch = useDispatch();
 
