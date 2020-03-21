@@ -9,6 +9,7 @@ import CakeContainer from "./components/cake/CakeContainer";
 
 import { Layout } from "antd";
 import IceCreamContainer from "./components/iceCream/IceCreamContainer";
+import InputCakeContainer from "./components/cake/InputCakeContainer";
 
 const { Content } = Layout;
 
@@ -16,19 +17,25 @@ const App = () => {
   let title = "React Redux App demo";
 
   return (
-    <Provider store={store}>
-      <Layout>
-        <Content>
-          <div className="App">
-            <h1>{title}</h1>
+    <div>
+      <React.StrictMode>
+        <Provider store={store}>
+          <Layout>
+            <Content>
+              <div className="App">
+                <h1>{title}</h1>
 
-            <CakeContainer />
+                <CakeContainer />
 
-            <IceCreamContainer />
-          </div>
-        </Content>
-      </Layout>
-    </Provider>
+                <InputCakeContainer />
+
+                <IceCreamContainer />
+              </div>
+            </Content>
+          </Layout>
+        </Provider>
+      </React.StrictMode>
+    </div>
   );
 };
 
