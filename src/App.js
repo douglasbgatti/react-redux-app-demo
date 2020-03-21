@@ -7,7 +7,8 @@ import store from "./redux/store";
 import "./App.css";
 import CakeContainer from "./components/CakeContainer";
 
-import { Layout } from "antd";
+import { Layout, Row } from "antd";
+import HooksCakeContainer from "./components/HooksCakeContainer";
 
 const { Content } = Layout;
 
@@ -21,7 +22,14 @@ const App = () => {
           <div className="App">
             <h1>{title}</h1>
 
-            <CakeContainer />
+            <div justify="center">
+              <h3>Connect store Cake Container</h3>
+              <CakeContainer />
+            </div>
+            <div justify="center">
+              <h3>Store Hooks Cake Container</h3>
+              <HooksCakeContainer />
+            </div>
           </div>
         </Content>
       </Layout>
