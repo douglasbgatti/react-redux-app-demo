@@ -5,10 +5,10 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 
 import "./App.css";
-import CakeContainer from "./components/CakeContainer";
+import CakeContainer from "./components/cake/CakeContainer";
 
-import { Layout, Row } from "antd";
-import HooksCakeContainer from "./components/HooksCakeContainer";
+import { Layout } from "antd";
+import IceCreamContainer from "./components/iceCream/IceCreamContainer";
 
 const { Content } = Layout;
 
@@ -22,14 +22,9 @@ const App = () => {
           <div className="App">
             <h1>{title}</h1>
 
-            <div justify="center">
-              <h3>Connect store Cake Container</h3>
-              <CakeContainer />
-            </div>
-            <div justify="center">
-              <h3>Store Hooks Cake Container</h3>
-              <HooksCakeContainer />
-            </div>
+            <CakeContainer />
+
+            <IceCreamContainer />
           </div>
         </Content>
       </Layout>
