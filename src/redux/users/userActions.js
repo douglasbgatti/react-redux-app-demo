@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export const constants = {
   FETCH_USER_REQUEST: "FETCH_USER_REQUESTS",
   FETCH_USER_SUCCESS: "FETCH_USER_SUCCESS",
@@ -16,4 +18,23 @@ export const actions = {
     type: constants.FETCH_USER_SUCCESS,
     payload: error
   })
+};
+
+export const fetchUsers = () => {
+  return dispatch => {
+    dispatch(actions.fetchUsersRequest);
+
+    axios
+      .get("https://jsonplaceholder.typicode.com/users")
+      .then(response => {
+        const users = response.data;
+
+        dispatch(actions.fetchUsersSuccess(users));
+      })
+      .catch(error => {
+        const msg = error.message;
+
+        dispatch(actions.fetchUsersFailure(msg));
+      });
+  };
 };
