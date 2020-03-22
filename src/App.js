@@ -11,6 +11,7 @@ import { Layout } from "antd";
 import IceCreamContainer from "./components/iceCream/IceCreamContainer";
 import InputCakeContainer from "./components/cake/InputCakeContainer";
 import ItemContainer from "./components/item/ItemContainer";
+import UserContainer from "./components/user/UserContainer";
 
 const { Content } = Layout;
 
@@ -34,8 +35,10 @@ const App = () => {
 
                 <hr />
 
-                <ItemContainer cake/>
-                <ItemContainer/>
+                <ItemContainer cake />
+                <ItemContainer />
+
+                <UserContainer />
               </div>
             </Content>
           </Layout>
